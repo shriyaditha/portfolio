@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shriya Somagani is a Senior Product Designer in Canada who designs B2B and enterprise tools, the customer experiences they power, and the design systems behind them.">
+<meta property="og:title" content="Shriya Somagani · Senior Product Designer">
+<meta property="og:description" content="B2B and enterprise tools, customer experiences and design systems. Work from lululemon, LVL Wellbeing, Cedulify and Accenture.">
+<meta property="og:image" content="https://shriyasomagani.com/img/og.jpg">
+<meta property="og:url" content="https://shriyasomagani.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Shriya Somagani · Senior Product Designer</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one-screen bento grid on a faint design-canvas dot grid. Profile card on the left, projects in a fixed grid; case studies open in a large sheet on the same page. */
+:root{
+  --canvas:#E9EDEF; --dot:#CBD2D7; --ink:#1B1F24; --muted:#5E6872; --paper:#FAFBFB;
+  --line:#D9DEE3; --select:#2E5BFF; --select-soft:rgba(46,91,255,.10); --on-accent:#FFFFFF;
+  --scrim:rgba(20,24,29,.42);
+  --shadow:0 1px 0 rgba(27,31,36,.04),0 18px 48px -14px rgba(27,31,36,.22);
+  --f-display:"Young Serif",Georgia,"Times New Roman",serif;
+  --f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --head:60px; --gap:14px; color-scheme:light;
+}
+/* palettes to explore: deliberately light-only */
+:root[data-palette="sage"]{--canvas:#E4EAE1;--dot:#C6D1C1;--ink:#1D2620;--muted:#5B685E;--paper:#F8FAF6;--line:#D3DCCE;--select:#2F6B4F;--select-soft:rgba(47,107,79,.11);--scrim:rgba(24,34,28,.42)}
+:root[data-palette="blush"]{--canvas:#F2E7E4;--dot:#E0CCC7;--ink:#2A1F1E;--muted:#75605D;--paper:#FCF8F7;--line:#E8D8D3;--select:#B33F57;--select-soft:rgba(179,63,87,.10);--scrim:rgba(42,31,30,.42)}
+:root[data-palette="lilac"]{--canvas:#E9E7F3;--dot:#D0CBE5;--ink:#1F1C2E;--muted:#625D7A;--paper:#FAF9FD;--line:#DCD8EC;--select:#5844D6;--select-soft:rgba(88,68,214,.10);--scrim:rgba(31,28,46,.42)}
+:root[data-palette="butter"]{--canvas:#F1ECD8;--dot:#DCD2B0;--ink:#23211A;--muted:#6A6550;--paper:#FCFAF2;--line:#E4DCC1;--select:#2743C9;--select-soft:rgba(39,67,201,.10);--scrim:rgba(35,33,26,.42)}
+
+body{background:var(--canvas);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  background-image:radial-gradient(var(--dot) 1.1px,transparent 1.2px);background-size:22px 22px}
+body.locked{overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+:focus-visible{outline:2px solid var(--select);outline-offset:3px}
+.mono{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.02em}
+.wrap{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));max-width:1060px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column}
+
+/* ---------- header ---------- */
+header{height:var(--head);display:flex;align-items:center;gap:20px}
+.logo{font-family:var(--f-display);font-size:18px;display:flex;align-items:center;gap:9px}
+.logo img{height:20px;width:auto;display:block}
+.logo i::after{content:"";position:absolute;inset:3px;background:var(--select)}
+nav{margin-left:auto;display:flex;gap:4px}
+nav button{padding:6px 12px;border-radius:999px;font-weight:500;font-size:14px}
+nav button:hover{background:var(--select-soft);color:var(--select)}
+
+/* ---------- grid ---------- */
+.grid{display:grid;gap:22px;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;margin-block:auto;position:relative;top:calc(var(--head) / -2)}
+.profile{grid-column:1/-1;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;min-width:0;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"av nm bt" "av ds ds" "av tg nw";column-gap:24px;row-gap:8px;align-items:center}
+.avatar{grid-area:av}.pname{grid-area:nm}.profile p{grid-area:ds}.tags{grid-area:tg}.pbtns{grid-area:bt;justify-self:end}.now{grid-area:nw;justify-self:end;align-self:center}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--select-soft) center/cover no-repeat;box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--line);display:grid;place-items:center;font:400 32px var(--f-display);color:var(--select);flex:none}
+.avatar.has-photo span{display:none}
+.profile h1{font-family:var(--f-display);font-weight:400;font-size:clamp(22px,2.1vw,28px);line-height:1.15;margin:0 0 4px;letter-spacing:-.01em;text-wrap:balance;max-width:30ch}
+.profile .role{color:var(--muted)}
+.profile p{margin:0;font-size:14.5px;line-height:1.5;max-width:78ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font:500 11.5px var(--f-mono);padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pbtns{display:flex;gap:8px;flex-wrap:wrap}
+.pbtns a{padding:7px 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500;color:inherit;text-decoration:none}
+.pbtns a:hover{border-color:var(--select)}
+.pbtns>a:first-child{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pbtns button{padding:7px 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500}
+.pbtns button:first-child{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pbtns button:hover{border-color:var(--select)}
+.now{color:var(--muted);display:flex;align-items:center;gap:8px}
+.now i{width:7px;height:7px;border-radius:50%;background:#28C840;box-shadow:0 0 0 3px rgba(40,200,64,.2);flex:none}
+
+.pcard{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:8px;display:flex;flex-direction:column;min-width:0;min-height:0;transition:border-color .2s,transform .25s,box-shadow .25s}
+
+.pcard.feature{grid-column:span 2}
+.pcard.feature .thumb{aspect-ratio:auto;flex:1}
+.badge{position:absolute;right:10px;top:10px;z-index:5;background:var(--paper);color:var(--ink);font:500 10.5px var(--f-mono);padding:3px 8px;border-radius:999px}
+.ph-label{position:absolute;right:10px;bottom:10px;color:var(--muted);font:500 10px var(--f-mono);opacity:.8}
+.thumb.has-photo .ph-label{display:none}
+.pcard:hover,.pcard:focus-visible{border-color:var(--select);transform:translateY(-3px);box-shadow:var(--shadow);outline:none}
+.thumb{aspect-ratio:1/1;max-width:100%;border-radius:12px;background-size:cover;background-position:center;display:grid;place-items:center;overflow:hidden;position:relative}
+.thumb.has-photo .art{display:none}
+.thumb .art{box-shadow:0 10px 22px -10px rgba(0,0,0,.45);zoom:.8}
+.pcard .info{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 4px 2px}
+.pcard .info>div{min-width:0}
+.pcard .t{display:block;font-weight:600;font-size:14px;line-height:1.3}
+.pcard .k{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pcard .k{display:block;color:var(--muted);margin-top:2px}
+.pcard .arrow{flex:none;width:26px;height:26px;font-size:13px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s,color .2s,border-color .2s}
+.pcard:hover .arrow,.pcard:focus-visible .arrow{background:var(--select);border-color:var(--select);color:#fff}
+
+/* design-tool selection handles on hover */
+.sel{position:absolute;inset:8px 8px auto;aspect-ratio:1/1;border:1px solid var(--select);border-radius:12px;opacity:0;pointer-events:none;transition:opacity .15s}
+.sel::before,.sel::after,.sel b::before,.sel b::after{content:"";position:absolute;width:8px;height:8px;background:var(--paper);border:1px solid var(--select)}
+.sel::before{left:-4px;top:-4px}.sel::after{right:-4px;top:-4px}.sel b::before{left:-4px;bottom:-4px}.sel b::after{right:-4px;bottom:-4px}
+.sel span{position:absolute;left:12px;top:12px;background:var(--select);color:#fff;font:500 10.5px var(--f-mono);padding:2px 6px;border-radius:4px}
+.pcard:hover .sel,.pcard:focus-visible .sel{opacity:1}
+
+/* project artwork placeholders (replaced by photos) */
+.art{width:76px;height:76px;position:relative;border-radius:16px;flex:none}
+.a-lulu{background:#B3243A}
+.a-lulu::before{content:"";position:absolute;left:12px;top:20px;width:42px;height:28px;border:2px solid #fff;border-radius:3px}
+.a-lulu::after{content:"";position:absolute;right:11px;top:30px;width:14px;height:26px;border:2px solid #fff;border-radius:3px;background:#B3243A}
+.a-lvl{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:12px}
+.a-lvl i{border-radius:20px}
+.a-lvl i:nth-child(1){background:#7B6CF6}.a-lvl i:nth-child(2){background:#FF8A5B}.a-lvl i:nth-child(3){background:#2FBF9B}.a-lvl i:nth-child(4){background:#FFC93C}
+.a-ds{background:#5B91FF}
+.a-ds::before{content:"";position:absolute;left:14px;top:26px;width:18px;height:18px;border-radius:50%;background:#fff}
+.a-ds::after{content:"";position:absolute;left:40px;top:26px;width:22px;height:18px;border-radius:3px;border:2px solid #fff}
+.a-ced{background:#EFE6DF}
+.a-ced::before{content:"";position:absolute;inset:12px;border-radius:50%;background:conic-gradient(#C99A8C 0 25%,#9DB4A0 0 45%,#D9C08D 0 70%,#9AA7C4 0)}
+.a-ced::after{content:"";position:absolute;inset:30px;border-radius:50%;background:#EFE6DF}
+.a-pick{background:#2F9E61}
+.a-pick::before{content:"";position:absolute;inset:16px;border:3px solid #fff;border-radius:6px;
+  -webkit-mask:linear-gradient(#000 0 0) top left/14px 14px no-repeat,linear-gradient(#000 0 0) top right/14px 14px no-repeat,linear-gradient(#000 0 0) bottom left/14px 14px no-repeat,linear-gradient(#000 0 0) bottom right/14px 14px no-repeat;
+  mask:linear-gradient(#000 0 0) top left/14px 14px no-repeat,linear-gradient(#000 0 0) top right/14px 14px no-repeat,linear-gradient(#000 0 0) bottom left/14px 14px no-repeat,linear-gradient(#000 0 0) bottom right/14px 14px no-repeat}
+.a-pick::after{content:"";position:absolute;left:28px;top:26px;width:20px;height:24px;background:#D7F5C7;border-radius:0 100% 0 100%;transform:rotate(-8deg)}
+
+/* ---------- sheet (case study / about / contact) ---------- */
+.scrim{position:fixed;inset:0;background:var(--scrim);backdrop-filter:blur(3px);z-index:50;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.sheet{position:fixed;z-index:60;left:50%;top:calc(24px + env(safe-area-inset-top,0px));bottom:0;width:min(1240px,calc(100% - 48px));transform:translateX(-50%);
+  background:var(--paper);border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0;box-shadow:var(--shadow);display:flex;flex-direction:column;animation:rise .32s cubic-bezier(.2,.9,.25,1)}
+@keyframes rise{from{transform:translate(-50%,40px);opacity:0}}
+.sheet.small{top:50%;bottom:auto;width:min(460px,calc(100% - 32px));border-radius:20px;border-bottom:1px solid var(--line);transform:translate(-50%,-50%);max-height:calc(100% - 48px);animation:popc .22s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes popc{from{transform:translate(-50%,-46%);opacity:0}}
+.sheet-bar{display:flex;align-items:center;gap:10px;padding:12px 14px 12px 22px;border-bottom:1px solid var(--line);flex:none}
+.sheet-bar .mono{color:var(--muted);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xbtn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:18px;line-height:1;flex:none}
+.xbtn:hover{background:var(--select-soft);border-color:var(--select);color:var(--select)}
+.sheet-body{overflow:auto;flex:1;min-height:0;overscroll-behavior:contain}
+
+.pad{padding:24px 26px 28px}
+.pad h2{font-family:var(--f-display);font-weight:400;font-size:28px;margin:0 0 10px;line-height:1.15}
+.pad p{margin:0 0 12px;max-width:62ch}
+.copyrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;flex-wrap:wrap}
+.copyrow .lbl{color:var(--muted);width:68px}
+.copyrow .val{flex:1;min-width:0;overflow-wrap:anywhere;user-select:all}
+.copyrow button,.copyrow a{font-size:12px;padding:4px 10px;border-radius:6px;background:var(--select-soft);color:var(--select);text-decoration:none;font-weight:500}
+
+/* case study: overview first, then a stepped story */
+.cs{max-width:980px;margin:0 auto;padding:28px 32px 44px}
+.ov{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:center}
+.ov .eyebrow{color:var(--select)}
+.ov h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,3.6vw,44px);line-height:1.05;letter-spacing:-.01em;margin:8px 0 14px;text-wrap:balance}
+.tldr{font-size:19px;line-height:1.45;margin:0;max-width:38ch;text-wrap:pretty}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.facts span{font:500 11.5px var(--f-mono);padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.ov-hero{aspect-ratio:4/3;max-width:100%;border-radius:16px;display:grid;place-items:center;background-size:cover;background-position:center}
+.ov-hero.has-photo .art{display:none}
+.glance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.glance>div{border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
+.glance .mono,.beat .mono{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.glance p{margin:6px 0 0;font-size:14.5px;line-height:1.45}
+.glance .impact{background:var(--select-soft);border-color:transparent}
+.glance .impact .mono{color:var(--select)}
+.metrics{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
+.metrics b{font-family:var(--f-display);font-size:26px;font-weight:400;display:block;line-height:1.1}
+.metrics span{font-size:12.5px;color:var(--muted)}
+
+.story{margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.story-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.story-head h2{font-family:var(--f-display);font-weight:400;font-size:22px;margin:0}
+.story-head .mono{color:var(--muted)}
+.steps{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.steps button{flex:none;display:flex;align-items:center;gap:8px;padding:6px 13px 6px 6px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;white-space:nowrap}
+.steps button:hover{border-color:var(--select)}
+.steps .n{width:22px;height:22px;border-radius:50%;background:var(--canvas);display:grid;place-items:center;font:500 11px var(--f-mono)}
+.steps button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.steps button[aria-selected="true"] .n{background:var(--paper);color:var(--ink)}
+.chapter{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:30px;margin-top:16px;align-items:start;animation:fade .25s}
+.chapter figure{margin:0}
+.chapter figure img{display:block;width:100%;border-radius:14px;border:1px solid var(--line);background:var(--canvas)}
+.ch-ph{aspect-ratio:4/3;max-width:100%;border-radius:14px;display:grid;place-items:center;align-content:center;gap:12px;color:var(--muted);text-align:center;padding:16px}
+.ch-ph .art{zoom:.9}
+.ch-text{min-width:0}
+.ch-text .count{color:var(--muted)}
+.ch-text h3{font-family:var(--f-display);font-weight:400;font-size:25px;line-height:1.2;margin:6px 0 14px;text-wrap:balance}
+.beat{padding:11px 0;border-top:1px solid var(--line)}
+.beat p{margin:4px 0 0;font-size:14.5px;line-height:1.5}
+.beat.did .mono{color:var(--select)}
+.beat ul{margin:6px 0 0;padding-left:18px;font-size:14.5px}
+.beat li{margin-bottom:4px}
+.quote{border-left:2px solid var(--select);padding:2px 0 2px 12px;margin:8px 0 0;font-style:italic;font-size:14.5px}
+.ch-nav{display:flex;gap:8px;margin-top:14px}
+.ch-nav button{padding:8px 15px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;font-weight:500}
+.ch-nav button:last-child{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.ch-nav button:disabled{opacity:.35;cursor:default}
+.ph{aspect-ratio:4/3;max-width:100%;border-radius:14px;border:0;background:var(--canvas);display:grid;place-items:center;color:var(--select);text-align:center;padding:16px}
+.cs-nav{display:flex;justify-content:space-between;gap:12px;margin-top:40px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap}
+.cs-nav button{padding:10px 14px;border:1px solid var(--line);border-radius:12px;min-width:0}
+.cs-nav button:hover{border-color:var(--select);color:var(--select)}
+.cs-nav .mono{display:block;color:var(--muted)}
+
+
+/* layout tag in sheet bar */
+.ltag{font:500 11px var(--f-mono);padding:3px 9px;border-radius:999px;background:var(--select-soft);color:var(--select);white-space:nowrap}
+
+/* Layout B: decision grid */
+.dg-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.dg-head h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,3.6vw,44px);line-height:1.05;letter-spacing:-.01em;margin:8px 0 14px}
+.dg-head .eyebrow{color:var(--select)}
+.dg-kv>div{padding:11px 0;border-top:1px solid var(--line)}
+.dg-kv>div:first-child{border-top:0;padding-top:4px}
+.dg-kv .mono{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.dg-kv p{margin:4px 0 0;font-size:14.5px;line-height:1.45}
+.dg-kv .imp .mono{color:var(--select)}
+.dg-title{margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}
+.dg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;grid-auto-flow:dense}
+.dcard{border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;align-items:center;min-width:0;transition:border-color .2s,transform .2s}
+button.dcard:hover{border-color:var(--select);transform:translateY(-2px)}
+.dthumb{aspect-ratio:1/1;border-radius:11px;display:grid;place-items:center;color:var(--muted)}
+.dthumb .art{zoom:.62}
+.dtext{display:flex;flex-direction:column;gap:3px;min-width:0}
+.dtext .num{color:var(--muted)}
+.dh{font-weight:600;font-size:15px}
+.dp{color:var(--muted);font-size:13.5px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dtext .more{color:var(--select);margin-top:3px}
+.dcard.open{grid-column:1/-1;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;padding:18px;align-items:start;border-color:var(--ink);animation:fade .25s}
+.dcard.open figure{margin:0}
+.dcard.open figure img{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}
+
+/* Layout C: story slides */
+.is-slides .sheet-body{display:flex;flex-direction:column}
+.slides{flex:1;min-height:0;display:flex;flex-direction:column;padding:16px 32px 18px;max-width:1060px;width:100%;margin:0 auto;box-sizing:border-box}
+.bars{display:flex;gap:6px}
+.bars button{flex:1;height:18px;padding:7px 0;background:var(--line);background-clip:content-box;border-radius:3px}
+.bars button.done{background-color:var(--ink)}
+.bars button.on{background-color:var(--select)}
+.slide-slot{flex:1;min-height:0;display:flex}
+.slide{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;padding:18px 0;animation:slidein .3s cubic-bezier(.2,.9,.25,1);overflow:auto}
+@keyframes slidein{from{opacity:0;transform:translateX(18px)}}
+.s-vis{min-width:0}
+.s-vis figure{margin:0}
+.s-vis img{display:block;width:100%;max-height:min(58vh,520px);object-fit:contain;border-radius:14px;border:1px solid var(--line);background:var(--canvas)}
+.s-txt{min-width:0}
+.s-txt h1{font-family:var(--f-display);font-weight:400;font-size:clamp(34px,4.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:8px 0 14px}
+.s-txt h2{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;margin:6px 0 16px;text-wrap:balance}
+.s-txt .eyebrow{color:var(--select)}
+.s-txt .count{color:var(--muted)}
+.s-txt .metrics b{font-size:34px}
+.s-ctrl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:10px;border-top:1px solid var(--line)}
+.s-count{color:var(--muted);text-align:center;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sbtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:16px;flex:none}
+.sbtn:not(:disabled):hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.sbtn:disabled{opacity:.3;cursor:default}
+
+/* homepage view switch + 60-second scan */
+.viewbar{grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:-6px 0 -8px}
+.viewbar>.mono{color:var(--muted)}
+.seg{display:inline-flex;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{padding:6px 14px;border-radius:999px;font-size:13.5px;font-weight:500}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.scan{display:none;grid-column:1/-1;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 24px;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr);gap:30px;animation:fade .25s}
+.grid[data-view="scan"] .scan{display:grid}
+.grid[data-view="scan"] .pcard{display:none}
+.scan h2{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px;font-weight:500;margin:0 0 8px}
+.xp button{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;width:100%;padding:9px 8px;margin:0 -8px;border-top:1px solid var(--line);border-radius:8px;box-sizing:content-box}
+.xp button:hover{background:var(--select-soft)}
+.xp b{font-weight:600;font-size:15px}
+.xp .ar{color:var(--select);grid-row:1/3;grid-column:2;align-self:center}
+.xp .r{color:var(--muted)}
+.xp p{margin:3px 0 0;font-size:13.5px;line-height:1.4;color:var(--muted);grid-column:1}
+.nums{display:flex;flex-direction:column;gap:12px}
+.nums b{font-family:var(--f-display);font-weight:400;font-size:30px;line-height:1;display:block;color:var(--select)}
+.nums span{font-size:13.5px;color:var(--muted);line-height:1.35}
+.tags.sk{display:flex}
+.edu{list-style:none;margin:0;padding:0;font-size:13.5px;display:flex;flex-direction:column;gap:4px;color:var(--muted)}
+.edu b{color:var(--ink);font-weight:600;margin-right:4px}
+.cb-hero{height:200px;border-radius:16px;display:grid;place-items:center;align-content:center;gap:10px;background-size:cover;background-position:center}
+.cb-hero .mono{color:var(--muted)}
+.cb-hero.has-photo>*{display:none}
+
+/* Homepage option B: intro column + large project cards */
+.cimp{display:none;color:var(--select);font:500 11.5px var(--f-mono);margin-top:5px}
+@media (min-width:761px){
+.grid[data-home="b"]{grid-template-columns:minmax(240px,290px) repeat(2,minmax(0,1fr));grid-template-rows:auto repeat(2,minmax(0,1fr));height:clamp(540px,calc(100dvh - var(--head) - 44px),760px);gap:16px 18px}
+.grid[data-home="b"] .profile{grid-column:1;grid-row:1/-1;display:flex;flex-direction:column;gap:12px;padding:22px;overflow:auto}
+.grid[data-home="b"] .avatar{width:80px;height:80px}
+.grid[data-home="b"] .profile h1{font-size:23px}
+.grid[data-home="b"] .profile p{font-size:14px}
+.grid[data-home="b"] .profile .tags,.grid[data-home="b"] .now{display:flex}
+.grid[data-home="b"] .pbtns{margin-top:auto}
+.grid[data-home="b"] .now{padding-top:12px;border-top:1px solid var(--line);align-items:flex-start}
+.grid[data-home="b"] .now i{margin-top:4px}
+.grid[data-home="b"] .viewbar{grid-column:2/-1;margin:0}
+.grid[data-home="b"] .pcard,.grid[data-home="b"] .pcard.feature{grid-column:auto}
+.pcard.cta{background:var(--ink);color:var(--paper);border-color:var(--ink);justify-content:space-between;padding:18px}
+.pcard.cta .ck{font:500 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.pcard.cta b{display:block;font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.15;margin-top:8px}
+.pcard.cta .cl{display:flex;flex-direction:column;gap:5px;font-size:13px;opacity:.85;margin-top:14px}
+.pcard.cta .arrow{border-color:rgba(255,255,255,.3);align-self:flex-end}
+.pcard.cta:hover .arrow{background:var(--paper);color:var(--ink)}
+.grid[data-view="scan"] .pcard.cta{display:none}
+
+.grid[data-home="b"] .thumb{aspect-ratio:auto;flex:1;min-height:110px}
+.grid[data-home="b"] .sel{aspect-ratio:auto;height:calc(100% - 88px)}
+.grid[data-home="b"] .pcard .t{font-size:15.5px}
+.grid[data-home="b"] .cimp{display:block}
+.grid[data-home="b"] .pbtns [data-open="contact"]{display:none}
+.grid[data-home="b"] .pbtns.no-resume [data-open="contact"]{display:inline-block}
+.grid[data-home="b"] .pbtns button,.grid[data-home="b"] .pbtns a{padding:7px 13px;font-size:13.5px}
+.grid[data-home="b"] .scan{grid-column:2/-1;grid-row:2/-1;overflow:auto;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-content:start}
+.grid[data-home="b"] .scan>div:last-child{grid-column:1/-1}
+}
+@media (min-width:761px) and (max-height:840px){
+.grid[data-home="b"] .profile .tags{display:none}
+.grid[data-home="b"] .avatar{width:60px;height:60px;font-size:24px}
+.grid[data-home="b"] .profile{gap:10px;padding:18px 20px}
+}
+.palette .seg{padding:2px;margin-right:6px}
+.palette .seg button{width:auto;height:auto;background:none;box-shadow:none;padding:3px 10px;font:500 12px var(--f-mono)}
+.palette .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper);outline:none}
+
+.sides{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;background:var(--select-soft);border-radius:14px;padding:4px}
+.sides>div{padding:11px 14px}
+.sides>div+b+div{border-left:0}
+.sides b{align-self:center;color:var(--select);font-weight:400;font-size:18px}
+.sides .mono{color:var(--select);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.sides p{margin:4px 0 0;font-size:14px;line-height:1.4}
+
+.gal{display:grid;gap:10px}
+.zoom{display:block;padding:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:var(--canvas)}
+.zoom img{display:block;width:100%;height:auto;transition:transform .3s}
+.zoom:hover img{transform:scale(1.02)}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(15,18,22,.86);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;cursor:zoom-out;animation:fade .2s}
+.lightbox .lb-in{min-height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:calc(64px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px))}
+.lightbox img{display:block;width:auto;max-width:min(100%,1600px);height:auto;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:default}
+.lightbox .xbtn{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));background:var(--paper)}
+
+/* Lululemon art: thumbnail = Lookbook fan + one card; hero = quiet two sides */
+.lwrap{position:absolute;inset:0;container-type:size;border-radius:inherit;overflow:hidden}
+.lart{position:absolute;inset:0;color:#1B1F24}
+.lart .gc{position:absolute;background:#fff;border-radius:2cqh;box-shadow:0 3cqh 6cqh -3cqh rgba(80,20,20,.32);z-index:3}
+.lart .chips{display:flex;gap:.4em;margin-bottom:.6em}
+.lart .chip{font-size:.66em;border:1px solid #DDD;border-radius:999px;padding:.15em .6em;font-weight:500;white-space:nowrap}
+.lart .nm{display:block;font-weight:600;white-space:nowrap}
+.lart .sub{display:block;font-size:.72em;color:#5E6872;white-space:nowrap;margin-top:.15em}
+.lart .lb{position:absolute;aspect-ratio:1800/2550;background-size:cover;background-position:top;border-radius:2cqh;border:.5cqh solid #fff;box-shadow:0 3cqh 6cqh -3cqh rgba(20,30,40,.35)}
+.lart .l1{background-image:url(img/lulu-lookbook-essentials-blue.webp)}
+.lart .l2{background-image:url(img/lulu-lookbook-built-to-move.webp);z-index:2}
+.lart .l3{background-image:url(img/lulu-lookbook-summer.webp)}
+/* thumbnail */
+.lt{background:radial-gradient(120% 140% at 0% 100%,#FF8A6B 0%,transparent 55%),radial-gradient(110% 120% at 100% 0%,#FF5C7A 0%,transparent 60%),linear-gradient(135deg,#D7192F 0%,#EF3340 55%,#FF6B4A 100%)}
+.lt .lb{height:74cqh;top:50%;left:58%}
+.lt .l1{transform:translate(-105%,-48%) rotate(-8deg)}
+.lt .l2{transform:translate(-50%,-52%)}
+.lt .l3{transform:translate(5%,-48%) rotate(8deg)}
+.lt .gc{left:6%;bottom:9%;padding:2.6cqh 3.2cqh;font-size:max(10px,3.8cqh)}
+/* hero: same fan + guest card */
+.lt.lhero{background:radial-gradient(120% 140% at 0% 100%,#FFE1D8 0%,transparent 55%),radial-gradient(110% 120% at 100% 0%,#FFE0E6 0%,transparent 60%),linear-gradient(135deg,#FBD3D6 0%,#FDE3E2 55%,#FFE9E1 100%)}
+@container (min-aspect-ratio: 2/1){
+  .lhero .lb{left:62%;height:82cqh}
+  .lhero .gc{left:14%;top:50%;bottom:auto;transform:translateY(-50%);font-size:4.6cqh;padding:3.6cqh 4.2cqh}
+}
+.lh{background:#F4E9E6}
+.lh .k{position:absolute;top:8cqh;font:500 max(8px,3cqh) var(--f-mono);color:#C8102E;text-transform:uppercase;letter-spacing:.1em}
+.lh .k1{left:7%}.lh .k2{right:7%}
+.lh .gc{left:7%;top:50%;transform:translateY(-50%);width:38cqh;padding:3.6cqh 4cqh;font-size:max(10px,4.2cqh)}
+.lh .sw{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:10cqh;height:10cqh;border-radius:50%;background:#C8102E;color:#fff;display:grid;place-items:center;font-size:5cqh}
+.lh .lb{right:7%;top:50%;height:72cqh;transform:translateY(-50%) rotate(3deg)}
+@container (min-aspect-ratio: 2/1){
+  .lh .k1,.lh .gc{left:16%}.lh .k2{right:18%}
+  .lh .gc{width:56cqh;font-size:5cqh}
+  .lh .lb{right:18%;height:68cqh;top:56%}
+}
+.cb-hero{position:relative;overflow:hidden}
+/* LVL art: the app on desktop + mobile (hero adds the check-in), on soft lavender */
+.lv{background:radial-gradient(120% 130% at 100% 0%,#E6DEF5 0%,transparent 60%),linear-gradient(135deg,#C2B0E4 0%,#D6CAEE 100%)}
+.lv .shot{position:absolute;width:auto;max-width:none;border-radius:1.6cqh;box-shadow:0 2.4cqh 4cqh -2cqh rgba(60,40,110,.35)}
+.lv .lap{left:8%;top:50%;height:74cqh;transform:translateY(-50%)}
+.lv .phn{right:7%;bottom:7%;height:66cqh;border-radius:2.4cqh;border:.6cqh solid #1E1B24}
+.lv .ck{display:none}
+@container (min-aspect-ratio: 2/1){
+  .lvhero .lap{left:auto;right:26%;height:84cqh}
+  .lvhero .phn{right:23%;height:78cqh;bottom:6%}
+  .lvhero .ck{display:block;left:9%;top:50%;height:42cqh;transform:translateY(-50%);border-radius:1.8cqh;z-index:2}
+}
+/* Cedulify art: phones + Harmony Wheel on warm peach */
+.cd{background:radial-gradient(120% 130% at 100% 0%,#FBEFE6 0%,transparent 60%),linear-gradient(135deg,#F1D6C6 0%,#F7E4D8 100%)}
+.cd img{position:absolute;width:auto;max-width:none}
+.cd .shot{height:86cqh;top:50%;filter:drop-shadow(0 2cqh 3cqh rgba(120,60,40,.22))}
+.cd .c1{left:44%;transform:translate(-50%,-48%) rotate(-5deg)}
+.cd .c2{left:72%;transform:translate(-50%,-52%) rotate(4deg);z-index:2}
+.cd .c3{display:none}
+.cd .wh{left:4%;bottom:6%;height:52cqh;z-index:3;filter:drop-shadow(0 1.5cqh 2.5cqh rgba(120,60,40,.25))}
+@container (min-aspect-ratio: 2/1){
+  .cdhero .shot{height:92cqh}
+  .cdhero .c1{left:50%}.cdhero .c2{left:66%}
+  .cdhero .c3{display:block;left:82%;transform:translate(-50%,-48%) rotate(5deg)}
+  .cdhero .wh{left:10%;top:50%;bottom:auto;height:78cqh;transform:translateY(-50%)}
+}
+/* Design System art: English and Arabic versions of the same screens, on soft blue */
+.ds{background:radial-gradient(120% 130% at 100% 0%,#EEF3F8 0%,transparent 60%),linear-gradient(135deg,#C9D8E8 0%,#DDE7F1 100%)}
+.ds img{position:absolute;width:auto;max-width:none;filter:drop-shadow(0 2cqh 3cqh rgba(30,50,90,.22))}
+.ds .hen{left:7%;top:22%;width:66cqw;border-radius:1.6cqh}
+.ds .har{right:7%;top:47%;width:66cqw;border-radius:1.6cqh;z-index:2}
+.ds .tg{position:absolute;font:500 max(8px,3cqh) var(--f-mono);color:#2F4A70;background:rgba(255,255,255,.75);padding:.35em .8em;border-radius:999px;z-index:3}
+.ds .t1{left:7%;top:9%}.ds .t2{right:7%;bottom:9%}
+.ds .mid{display:none}
+@container (min-aspect-ratio: 2/1){
+  .dshero .en{left:7%;top:50%;height:84cqh;transform:translateY(-50%)}
+  .dshero .ar{right:7%;top:50%;bottom:auto;height:84cqh;transform:translateY(-50%)}
+  .dshero .t1{left:7%;top:5cqh;bottom:auto}.dshero .t2{right:7%;top:5cqh;bottom:auto}
+  .dshero .mid{display:flex;flex-direction:column;align-items:center;gap:1.4cqh;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:500 max(9px,3.4cqh) var(--f-mono);color:#2F4A70;text-align:center;z-index:3}
+  .dshero .mid b{width:11cqh;height:11cqh;border-radius:50%;background:#2F4A70;color:#fff;display:grid;place-items:center;font-size:5.4cqh;font-weight:400}
+}
+/* clean homepage thumbnails: one main element each */
+.lt:not(.lhero) .l1,.lt:not(.lhero) .l3{display:none}
+.lt:not(.lhero) .l2{height:70cqh;left:56%;top:50%;transform:translate(-50%,-50%)}
+.lt:not(.lhero) .gc{left:9%;bottom:14%}
+.lv:not(.lvhero) .lap{left:6%;top:50%;height:64cqh;transform:translateY(-54%)}
+.lv:not(.lvhero) .phn{right:6%;bottom:9%;height:60cqh}
+.cd:not(.cdhero) .shot{display:none}
+.cd:not(.cdhero) .wh{left:50%;top:50%;bottom:auto;height:70cqh;transform:translate(-50%,-50%)}
+.ds:not(.dshero) .tg{display:none}
+.ds:not(.dshero) .hen{left:10%;top:23%;width:56cqw}
+.ds:not(.dshero) .har{right:10%;top:auto;bottom:23%;width:56cqw}
+.lm{background:#F0F3F6}
+.lm img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:92%;height:auto;max-width:none;border-radius:10px}
+.lmhero img{width:auto;height:100%;border-radius:0}
+.cgroup{grid-column:1/-1;font-family:var(--f-display);font-weight:400;font-size:19px;margin:10px 0 -2px}
+.cgroup:first-child{margin-top:0}
+.cut img{object-fit:contain!important;padding:5%;box-sizing:border-box}
+.zoom.cut{padding:3%}
+.zoom.cut img{padding:0;border:0!important;border-radius:0!important;background:none}
+@media (min-width:761px){.cb-hero{height:250px}}
+
+/* palette switcher */
+.palette{display:none!important}
+.tuning .palette{display:flex!important}
+.palette{position:fixed;z-index:70;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 14px;box-shadow:var(--shadow)}
+.palette .mono{color:var(--muted);margin-right:4px}
+.palette button{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--a) 0 50%,var(--b) 50%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.palette button[aria-pressed="true"]{outline:2px solid var(--ink);outline-offset:2px}
+
+/* Layout C: impact board */
+.bd-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.bd-top h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,3.6vw,44px);line-height:1.05;letter-spacing:-.01em;margin:8px 0 14px}
+.bd-top .eyebrow,.ss-side .eyebrow{color:var(--select)}
+.bd-impact{background:var(--select);color:var(--on-accent);border-radius:18px;padding:22px 24px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.bd-impact .mono{opacity:.8;text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.bd-impact p{font-family:var(--f-display);font-size:23px;line-height:1.25;margin:0}
+.bd-impact .metrics span{color:inherit;opacity:.8}
+.bd-impact .flow span{background:rgba(255,255,255,.16);border-color:transparent;color:inherit}
+.bd-strip,.ss-prob{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.bd-strip>div,.ss-prob>div{border:1px solid var(--line);border-radius:14px;padding:13px 16px}
+.bd-strip .mono,.ss-prob .mono,.ss-side .mono,.beats3 .mono{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.bd-strip p,.ss-prob p{margin:5px 0 0;font-size:14.5px;line-height:1.45}
+.bd-h{font-family:var(--f-display);font-weight:400;font-size:22px;margin:30px 0 12px}
+.did-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.did-row>div{background:var(--select-soft);border-radius:14px;padding:14px 16px;font-size:14.5px;font-weight:500;line-height:1.35;display:flex;gap:10px;align-items:flex-start}
+.did-row i,.ss-did i{font-style:normal;flex:none;width:20px;height:20px;border-radius:50%;background:var(--select);color:var(--on-accent);display:grid;place-items:center;font-size:11px;margin-top:1px}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.tile{border:1px solid var(--line);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tv{flex:1;min-height:170px;border-radius:12px;overflow:hidden;display:flex}
+.tv>*{flex:1;margin:0;aspect-ratio:auto;border-radius:12px}
+.tv figure img{width:100%;height:100%;object-fit:cover;display:block;border:0}
+.tv .ch-ph,.tv .ph{min-height:170px}
+.tt{padding:0 6px 6px}
+.tt h3{font-size:16px;font-weight:600;margin:0 0 4px}
+.tt p{margin:0;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.tt .res{color:var(--select);margin-top:6px;font-weight:500}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.flow span{font:500 11.5px var(--f-mono);padding:4px 9px;border-radius:999px;border:1px solid var(--line)}
+.flow b{font-weight:400;opacity:.6}
+.glance .flow{margin-top:10px}
+
+/* Layout D: sticky summary */
+.ss{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;max-width:1200px;margin:0 auto;padding:28px 32px 44px;align-items:start}
+.ss-side{position:sticky;top:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.ss-side .eyebrow{text-transform:none;letter-spacing:.02em;font-size:11.5px;color:var(--select)}
+.ss-side h1{font-family:var(--f-display);font-weight:400;font-size:36px;line-height:1.05;margin:0}
+.ss-side .tldr{font-size:16px}
+.ss-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:-4px;font-size:14px}
+.ss-meta b{font-weight:600}
+.ss-meta span{font:500 12px var(--f-mono);color:var(--select);background:var(--select-soft);padding:3px 9px;border-radius:999px}
+.ss-imp{background:var(--select);color:var(--on-accent);border-radius:16px;padding:16px 18px}
+.ss-imp .mono{color:inherit;opacity:.8}
+.ss-imp p{margin:5px 0 0;font-family:var(--f-display);font-size:19px;line-height:1.3}
+.ss-imp .metrics span{color:inherit;opacity:.8}
+.ss-imp .metrics b{font-size:24px}
+.ss-imp .flow span{background:rgba(255,255,255,.16);border-color:transparent}
+.ss-did ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ss-did li{display:flex;gap:10px;font-size:14px;line-height:1.4}
+.ss-main{min-width:0;display:flex;flex-direction:column;gap:26px}
+.ss-prob{margin-top:0}
+.scard-v{border-radius:14px;overflow:hidden}
+.scard-v figure{margin:0}.scard-v img{display:block;width:100%;border-radius:14px;border:1px solid var(--line)}
+.scard-v .ch-ph,.scard-v .ph{aspect-ratio:16/9}
+.scard .count{display:block;color:var(--muted);margin:12px 0 8px}
+.beats3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.beats3.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.beats3>div{border-top:2px solid var(--line);padding-top:8px;min-width:0}
+.beats3>.did{border-top-color:var(--select)}
+.beats3 p,.beats3 li{font-size:14px;line-height:1.45;margin:4px 0 0}
+.beats3 ul{margin:4px 0 0;padding-left:16px}
+
+/* Layout E: sticky summary + expandable cards */
+.cb-head{margin:4px 0 -10px}
+.combo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;grid-auto-flow:dense}
+.ctile{border:1px solid var(--line);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:border-color .2s,transform .2s}
+button.ctile:hover{border-color:var(--select);transform:translateY(-2px)}
+button.ctile{text-align:left}
+button.ctile .tv{flex:none;height:auto;min-height:0;aspect-ratio:16/10}
+.ctile .tt p:not(.res){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ctile .more{display:block;color:var(--select);margin-top:8px}
+.ctile.open{grid-column:1/-1;display:flex;flex-direction:column;gap:20px;padding:14px;border-color:var(--ink);animation:fade .25s}
+.ctile.open .ch-text{padding:0 8px 8px;max-width:72ch}
+.ctile.open .cv>.ch-ph{aspect-ratio:16/9}
+.ctile.open .cv figure{margin:0}.ctile.open .cv img{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}
+.ctile.open h3{font-family:var(--f-display);font-weight:400;font-size:24px;line-height:1.2;margin:6px 0 12px}
+.didlink{display:flex;gap:10px;font-size:14px;line-height:1.4;padding:4px 6px;margin:-4px -6px;border-radius:8px;width:calc(100% + 12px)}
+.didlink:hover,.didlink.on{background:var(--select-soft)}
+.didlink span{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .grid{gap:16px}
+  .profile .tags,.now{display:none}
+  .avatar{width:80px;height:80px}
+  .scan{grid-template-columns:1fr 1fr}.scan>div:last-child{grid-column:1/-1}
+  .profile{grid-template-areas:"av nm bt" "av ds ds"}
+}
+@media (max-height:620px) and (min-width:761px){.tags{display:none}}
+@media (max-width:760px){
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  nav{display:none}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-block:4px 24px;gap:14px;top:0}
+  .profile{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:22px}
+  .pbtns,.now{justify-self:auto;align-self:auto}
+  .tags,.now{display:flex}
+  .pcard.feature,.pcard:last-child{grid-column:1/-1}.pcard.feature .thumb,.pcard:last-child .thumb{aspect-ratio:16/9}
+  .scan{grid-template-columns:minmax(0,1fr);padding:18px}.viewbar>.mono{display:none}
+  .now{padding-top:12px;border-top:1px solid var(--line);width:100%}
+  .sheet,.sheet.small{inset:0;top:0;width:auto;transform:none;border-radius:0;border:0;max-height:none;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);animation:fade .2s}
+  .sheet.small{top:auto;bottom:0;border-radius:20px 20px 0 0}
+  .cs{padding:20px 18px 40px}
+  .ov,.chapter,.glance{grid-template-columns:minmax(0,1fr)}
+  .ov{gap:18px}.ov-hero{order:-1;aspect-ratio:16/9}
+  .tldr{font-size:17px}
+  .chapter{gap:16px}
+  .dg-head,.dg-grid,.dcard.open{grid-template-columns:minmax(0,1fr)}
+  .dg-head{gap:16px}
+  .dcard{grid-template-columns:72px minmax(0,1fr)}
+  .slides{padding:12px 18px 14px}
+  .slide{grid-template-columns:minmax(0,1fr);gap:16px;align-items:start;align-content:start;padding:14px 0}
+  .s-vis img,.s-vis .ch-ph,.s-vis .ov-hero,.s-vis .ph{max-height:32vh;aspect-ratio:16/9}
+  .s-vis img{object-fit:cover}
+  .ltag{display:none}
+  .bd-top,.bd-strip,.ss,.ss-prob,.beats3,.beats3.two{grid-template-columns:minmax(0,1fr)}
+  .bento{grid-template-columns:minmax(0,1fr)}.tile{grid-column:auto!important}
+  .ss{padding:20px 18px 40px;gap:24px}.ss-side{position:static}
+  .palette{right:50%;transform:translateX(50%)}
+  .combo,.ctile.open{grid-template-columns:minmax(0,1fr)}
+  .sides{grid-template-columns:minmax(0,1fr)}.sides b{justify-self:center;transform:rotate(90deg)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <span class="logo"><img src="img/logo.png" alt="" width="22" height="26">Shriya Somagani</span>
+    <nav aria-label="Main">
+      <button data-open="about">About</button>
+      <button data-open="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="grid" id="grid">
+    <section class="profile" aria-label="Profile">
+      <div class="avatar" id="avatar"><span>SS</span></div>
+      <div class="pname">
+        <h1>I design the tools businesses run on, and the experiences their customers love.</h1>
+        <span class="role mono">Shriya Somagani · Senior Product Designer · Canada</span>
+      </div>
+      <p>At lululemon I designed both sides of clienteling: the platform ~30 Personal Shoppers use to serve up to 27,000 guests, and the Lookbooks those guests shop. Before that, I led design at LVL Wellbeing, a B2B platform, and built its design system for 200k+ users.</p>
+      <div class="tags"><span>B2B &amp; enterprise</span><span>Customer experiences</span><span>Design systems</span><span>AI-assisted UX</span></div>
+      <div class="pbtns" id="pbtns"><button data-scan="1">Resume</button><a href="https://www.linkedin.com/in/shriyasomagani" target="_blank" rel="noopener">LinkedIn ↗</a><button data-open="contact">Say hi</button></div>
+      <span class="now mono"><i></i>Open to Senior Product Designer roles across Canada</span>
+    </section>
+    <div class="viewbar"><div class="seg" role="tablist" aria-label="View">
+      <button role="tab" aria-selected="true" data-view="work">Case studies</button>
+      <button role="tab" aria-selected="false" data-view="scan">60-second scan</button></div>
+      <span class="mono">Short on time? The scan has everything on one card.</span></div>
+    <section class="scan" aria-label="Experience at a glance">
+      <div><h2 class="mono">Experience</h2><div class="xp">
+        <button data-open="lulu"><b>lululemon</b><span class="ar">→</span><span class="r mono">Senior UX Designer · May 2026</span><p>Clienteling platform: guest workspace, tasks, shoppable Lookbooks, AI-assisted outreach</p></button>
+        <button data-open="lvl"><b>LVL Wellbeing</b><span class="ar">→</span><span class="r mono">Lead Product Designer · Sep 2021 – Sep 2025</span><p>B2B wellbeing platform and its bilingual design system, 200k+ users</p></button>
+        <button data-open="ced"><b>Cedulify</b><span class="ar">→</span><span class="r mono">Product Designer · May 2020 – Sep 2021</span><p>Designed the whole app: onboarding, calendar, journal and the Harmony Wheel</p></button>
+        <button data-open="lms"><b>Accenture</b><span class="ar">→</span><span class="r mono">UX Designer · 2016 – 2018</span><p>Company-wide learning management system for Novartis</p></button>
+      </div></div>
+      <div><h2 class="mono">By the numbers</h2><div class="nums">
+        <div><b>200k+</b><span>users on the design system I built at LVL</span></div>
+        <div><b>27k</b><span>guests served by ~30 Personal Shoppers on the lululemon platform</span></div>
+        <div><b>2</b><span>languages built natively, left-to-right and right-to-left</span></div>
+      </div></div>
+      <div><h2 class="mono">Strengths</h2><div class="tags sk"><span>B2B &amp; enterprise</span><span>Customer experiences</span><span>Complex workflows</span><span>Design systems</span><span>AI-assisted UX</span><span>Information architecture</span><span>RTL / bilingual</span><span>Data visualisation</span><span>Research &amp; testing</span><span>Prototyping</span></div>
+        <h2 class="mono" style="margin-top:18px">Education</h2><ul class="edu"><li><b>Vancouver Film School</b> Digital Design</li><li><b>Humber College</b> 3D Modelling</li></ul></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+/* Photos: put files in an img/ folder and list them here, e.g. lulu:"img/lulu.jpg". Empty = colour + icon placeholder. */
+const PHOTOS={profile:"img/profile.webp",lulu:"",lvl:"",ds:"",ced:"",pick:"",lms:""};
+
+const IMG="https://images.squarespace-cdn.com/content/v1/5dea06319ab28a7676dad061/";
+const ART={
+  lulu:'<div class="art a-lulu"></div>',
+  lvl:'<div class="art a-lvl"><i></i><i></i><i></i><i></i></div>',
+  ds:'<div class="art a-ds"></div>',
+  ced:'<div class="art a-ced"></div>',
+  lms:'<div class="art" style="background:#9DB2C8"></div>',
+  pick:'<div class="art a-pick"></div>'
+};
+const TINT={lulu:"#B3243A",lvl:"#7B6CF6",ds:"#5B91FF",ced:"#C99A8C",pick:"#2F9E61",lms:"#6E8AA6"};
+
+const P=[
+ {id:"lulu",sides:[["For the business","Personal Shoppers: guest workspace, tasks and AI-assisted outreach"],["For their customers","Guests: shoppable Lookbooks and personal follow-ups"]],card:"27k guests · AI outreach · Lookbooks",layout:"combo",title:"Lululemon Clienteling",kind:"Enterprise · Retail",
+  tldr:"A connected workspace that lets each Personal Shopper manage up to 900 guests and still keep every relationship personal.",
+  facts:["Senior UX Designer","May 2026","Guests · Tasks · Lookbooks · AI"],
+  problem:"As guest books grew, each guest's history, preferences and conversations got harder to track, and service risked feeling transactional.",
+  role:"Part of a cross-functional team with Product, Engineering, Operations and Personal Shoppers. I owned the design of the workflows below, from discovery to production-ready specs.",
+  impact:"One connected system that lets ~30 Personal Shoppers serve up to 27,000 guests personally.",
+  metrics:[["~30","Personal Shoppers"],["900","guests each, up to"],["27k","guest relationships"]],
+  flow:["Guest context","Conversation","Recommendation","Follow-up"],
+  did:["Turned the Guest Book into a central relationship workspace","Designed an urgency-based task system","Brought shoppable Lookbooks into the workflow","Designed AI outreach that keeps shoppers in control"],
+  chapters:[
+   {t:"Relationship workspace",c:"Guest context was scattered. Every screen had to answer three questions: Who is this guest? What has happened? What should I do next?",d:"Evolved the Guest Book into one workspace for guest context, conversations, recommendations and follow-ups, covering hierarchy, search, filters, assignment and permissions.",r:"Principle: surface the right context at the moment it becomes actionable.",gallery:["img/lulu-guest-profile.webp","img/lulu-guest-book.webp"],caps:["Guest profile","Guest Book with 800 assigned guests"],cols:1,cap:"Relationship workspace"},
+   {t:"Follow-up as a system",c:"Rigid scheduling didn't match how Personal Shoppers actually work. Promises to guests, like checking a size or confirming an appointment, were easy to lose.",d:"Organised tasks by urgency (Overdue, Due today, Upcoming and No due date) with priorities, task types and reminders. Only the title is required, so shoppers can capture intent in seconds and add details later. Open tasks also appear inside each guest's conversation, right where the follow-up happens.",gallery:["img/lulu-tasks.webp","img/lulu-create-task.webp","img/lulu-messaging-tasks.webp"],caps:["My Tasks, grouped by urgency","Create task: only the title is required","Open tasks inside a guest conversation"],cols:1,cap:"Tasks and reminders"},
+   {t:"Shoppable Lookbooks",c:"Personal Shoppers were curating recommendations outside the platform.",d:"Added reusable media and shoppable Lookbooks, designed from creation through to the guest shopping them.",r:"A full journey: Understand → Curate → Share → Shop → Follow up.",gallery:["img/lulu-lookbook-essentials-blue.webp","img/lulu-lookbook-built-to-move.webp","img/lulu-lookbook-summer.webp"],caps:["Lookbook: Everyday Essentials","Lookbook: Built to move","Lookbook: Casual summer day fits"],cols:3,top:true,cap:"Lookbooks"},
+   {t:"AI-assisted outreach",c:"Writing personal outreach for up to 900 guests takes time, but the voice has to stay the shopper's own.",d:"Designed Guest Insights: an AI summary of each guest that surfaces opportunities (a first 10K, $10 from the next tier, pants due for a refresh), suggested messages grouped by theme, and a ready-to-edit email draft. Every suggestion is marked to review and edit before sending, and opens straight into messaging.",r:"Principle: use AI to accelerate judgment, not replace it.",gallery:["img/lulu-ai-insights.webp"],caps:["Guest Insights: AI summary, suggested messages and email draft"],cols:1,top:true,cap:"AI-assisted outreach"},
+   {t:"Built for the shop floor",c:"Personal Shoppers use the platform in store every day, across different roles, permissions and hundreds of guests each.",d:"Tested assumptions with Personal Shopper feedback and designed for real conditions: permissions, errors, empty states, assignment logic, responsive behaviour and edge cases.",r:"In daily use by Personal Shoppers in lululemon stores.",gallery:["img/lulu-lists.webp"],caps:["Lists, including an empty state"],cols:1,cap:"Guest lists"}
+  ]},
+ {id:"lvl",sides:[["For the business","Employers and team leads: Teams, check-in data and a shared design system"],["For their people","200k+ employees: wellness video, daily check-ins and community, in English and Arabic"]],card:"200k+ users · Web & mobile · EN + AR",layout:"combo",title:"LVL Wellbeing",kind:"B2B SaaS · Product + design system",
+  tldr:"I led design of LVL, a B2B wellbeing platform organisations offer their people, and built the bilingual design system it scaled on.",
+  facts:["Lead Product Designer","Sep 2021 – Sep 2025","Web & mobile · English & Arabic"],
+  problem:"Work takes up most of people's time, and looking after yourself gets pushed aside. A fast-moving startup had to ship a product for this quickly, in two languages that read in opposite directions, without the UI fragmenting.",
+  role:"Lead Product Designer for LVL's web and mobile apps, from research to UI, and the owner of its design system in English and Arabic.",
+  impact:"Designed the platform now used by 200,000+ people, and the system that let it scale without design debt.",
+  metrics:[["200k+","users"],["LTR + RTL","built in"],["4 yrs","lead designer"]],
+  did:["Designed a daily check-in people use every day","Built a data dashboard for team leads","Designed Teams with its own pop-out navigation","Designed default profile pictures from the brand patterns","Built RTL as a first-class system","Structured components with atomic design"],
+  chapters:[
+   {group:"The product",t:"Daily check-in",c:"The check-in is meant to be used every day, so it has to stand out and take seconds.",d:"Designed a one-tap check-in with four moods (Energized, Productive, Tired and Stressed), each answered with its own supportive message. Plain words and emoji, a colourful border and a white interior keep the choices easy to read.",gallery:["img/lvl-checkin.webp"],caps:["Daily check-in and its tailored responses"],cols:1,cut:true,cap:"Daily check-in"},
+   {group:"The product",t:"Data for team leads",c:"Team leads (Champions) needed to see how their people were doing, without digging through raw data.",d:"Worked with our data analyst on a Champion dashboard: check-in sentiment, adoption, a country breakdown, the most popular activities, content use by pillar, and each member's month-by-month wellbeing journey, exportable to CSV.",gallery:["img/lvl-dashboard.webp"],caps:["Champion dashboard"],cols:1,cut:true,cap:"Champion dashboard"},
+   {group:"The product",t:"Teams",c:"Adding a Slack-like space for groups meant new navigation, but the main nav's key actions had to stay visible at all times.",d:"Designed Teams with channels for each organisation, posts with photos, comments, reactions with counts, and prompts that invite people to share. A pop-out navigation exists only inside Teams, so the main navigation stays untouched.",r:"The main navigation stayed intact, with room left for future features.",gallery:["img/lvl-teams.webp"],caps:["Teams: channels, posts, reactions and prompts"],cols:1,cut:true,cap:"Teams"},
+   {group:"The product",t:"Default profile pictures",c:"Profile pictures appear all over the platform, and many people never upload one.",d:"Designed a set of default avatars from the shapes in LVL's brand patterns, in every brand colour, so they feel neutral, fun and vibrant.",gallery:["img/lvl-avatars.webp"],caps:["Default profile pictures"],cols:1,cut:true,cap:"Default profile pictures"},
+   {group:"The system",t:"RTL as first-class",c:"Flipping English layouts for Arabic breaks hierarchy and readability.",d:"Designed mirrored components, layouts and type rules from the start.",r:"True parity between languages, with no costly redesigns later.",gallery:["img/ds-rtl-cut.webp"],caps:["The same screens in English and Arabic"],cols:1,cut:true,cap:"English and Arabic components"},
+   {group:"The system",t:"Atomic structure",c:"The system had to stay flexible while the product changed quickly.",d:"Structured it with atomic design: small components like the EventVideoBox combine into full sections like Upcoming events, each with its own Arabic counterpart.",r:"Designers and developers shared one mental model of how pieces fit together.",gallery:["img/ds-eventbox.webp","img/ds-events-section.webp"],caps:["EventVideoBox component, English and Arabic","Upcoming events section, built from EventVideoBox"],thumb:"img/ds-events-section.webp",cols:1,cut:true,cap:"Component to section"},
+   {group:"The system",t:"Rules first",c:"Ad-hoc choices would fragment the product as it grew, especially with two languages to support.",d:"Defined foundations for colour, typography, spacing and interaction states before scaling features. Every component got the same clear states (default, filled and error), with matching English and Arabic versions built from one base component.",r:"A shared visual language every design decision could follow.",gallery:["img/ds-fields.webp"],caps:["Text fields: types and states, in English and Arabic"],cols:1,cut:true,cap:"Text field states"},
+   {group:"The system",t:"Scaling up",c:"LVL grew from an early product to 200,000+ users.",d:"Kept the system as core infrastructure, evolving it with every feature. The live home screen is built entirely from the same components: event boxes, check-ins and navigation.",r:"Faster delivery and consistent data visualisation, without extra design debt.",gallery:["img/lvl-art-laptop.webp"],caps:["The LVL home screen, built from the system"],cols:1,cap:"The system in product"}
+  ]},
+ {id:"ced",sides:[["For the business","One connected product the founding team could launch and grow"],["For users","People building routines: personal onboarding, calendar, journal and the Harmony Wheel"]],card:"End-to-end · Onboarding · Harmony Wheel",layout:"combo",title:"Cedulify",kind:"Consumer · Mobile app",
+  tldr:"I designed Cedulify end to end: a personal app that helps people build routines, reflect, and see how balanced their week really is.",
+  facts:["Product Designer","May 2020 – Sep 2021","End-to-end · Mobile"],
+  problem:"People struggle to stay consistent with daily routines, even though those small activities shape their wellbeing. Planning, journaling and habit tracking lived in separate apps.",
+  role:"Product designer for the whole app: flows, UI and prototyping, working directly with the CEO to shape the product.",
+  impact:"Shaped the whole product, and its personalised onboarding became one of the app's most valued features.",
+  did:["Designed the product end to end, across every core feature","Designed a personalised onboarding flow","Designed the calendar and a guided journal","Designed the Harmony Wheel"],
+  chapters:[
+   {t:"One app for the whole routine",c:"Planning, reflecting and tracking habits were split across different apps, so routines fell apart.",d:"Worked with the CEO to turn the vision into one connected product, introduced in a short welcome: personalised time balance, the Harmony Wheel, a calendar, an activity library and a guided journal.",r:"A single flow from planning a day to reflecting on it.",gallery:["img/ced-welcome.webp"],caps:["Welcome and what to expect"],cols:1,cut:true,cap:"Welcome flow"},
+   {t:"Personal onboarding",c:"A generic setup wouldn't fit how differently people live.",d:"Designed a conversational onboarding that asks about living situation, children, work and daily activity, then the categories people want to track. It ends by asking for read-only calendar access, explained plainly, so the schedule is ready from day one.",r:"It took longer to build, and became one of the app's most valued features.",gallery:["img/ced-onboarding.webp"],caps:["Conversational onboarding"],cols:1,cut:true,cap:"Onboarding flow"},
+   {t:"Calendar & activities",c:"People needed a plan they could actually follow, not just a blank calendar.",d:"Designed day and month calendar views that sync with local calendars, and a quick add-activity flow by category, with repeat and add-people options.",gallery:["img/ced-calendar.webp"],caps:["Day view, add activity and month view"],cols:1,cut:true,cap:"Calendar"},
+   {t:"A guided journal",c:"Plans and reflections lived in separate places, so people never saw what actually worked for them.",d:"Designed a one-minute journal: pick the favourite activity of the day, rate the experience, and look back on past entries with the reason behind each one. Those entries feed tailored recommendations.",gallery:["img/ced-journal.webp"],caps:["Journal: log, rate and look back"],cols:1,cut:true,cap:"Journal"},
+   {t:"The Harmony Wheel",c:"It's hard to see where your week actually goes.",d:"Designed the Harmony Wheel and harmony rings, which show how time splits across sleep, self-care, leisure, movement, learning, social, home and work, so imbalance is easy to spot and act on.",gallery:["img/ced-harmony.webp"],caps:["Harmony Wheel and harmony rings"],cols:1,cut:true,cap:"Harmony Wheel"}
+  ]},
+ {id:"lms",layout:"combo",card:"Company-wide · Required training · Enterprise",title:"Learning Management System (LMS)",kind:"Accenture · Enterprise tool",
+  sides:[["For the business","Novartis: required training completed across the company"],["For their people","Employees: one place to find, complete and track training"]],
+  tldr:"At Accenture, I designed an internal learning management system that employees across Novartis use to complete their training, in an industry where finishing it isn't optional.",
+  facts:["UX Designer","2016 – 2018","Accenture · Novartis"],
+  problem:"Every Novartis employee had training to complete, from a huge catalogue covering every kind of course. In healthcare, finishing required training on time is essential, so the platform had to make it easy to find and complete.",
+  role:"UX Designer at Accenture for Novartis, a key global client, designing for Novartis employees. Worked with developers, other designers and a project manager.",
+  impact:"One platform where every Novartis employee completes their required training.",
+  metrics:[["Company-wide","every employee"],["3 yrs","on the platform"]],
+  did:["Designed a personal learning dashboard","Redesigned the course catalogue and search","Designed role-based learning paths","Designed manager and admin reporting"],
+  chapters:[
+   {t:"A personal learning dashboard",c:"Employees had to find their required training in a huge catalogue.",d:"People see only what applies to them, with due dates first, instead of searching the full catalogue.",gallery:["img/lms-dashboard.webp"],caps:["Learning dashboard (illustrative recreation)"],cols:1,cap:"Learning dashboard"},
+   {t:"Catalogue and search",c:"The catalogue covered every kind of training, so finding the right course was slow.",d:"Grouped courses into clear categories, with filters for role, language and format.",gallery:["img/lms-catalogue.webp"],caps:["Course catalogue (illustrative recreation)"],cols:1,cap:"Catalogue"},
+   {t:"Role-based learning paths",c:"New hires needed to know what to complete, and in what order.",d:"A guided sequence for each role, so onboarding feels like a journey rather than a checklist.",gallery:["img/lms-paths.webp"],caps:["Learning path (illustrative recreation)"],cols:1,cap:"Learning path"},
+   {t:"Manager and admin reporting",c:"Managers needed to know who was behind on required training.",d:"A team view that shows who's on track, with one-click reminders instead of exported spreadsheets.",gallery:["img/lms-reporting.webp"],caps:["Team reporting (illustrative recreation)"],cols:1,cap:"Reporting"}
+  ]}
+];
+
+/* Earlier work, kept here so it can be restored later */
+const EARLIER=[
+ {id:"pick",layout:"combo",title:"Pick",kind:"Concept · Mobile app",
+  tldr:"Scan a product and know instantly whether it's safe for your diet or allergies.",
+  facts:["UX/UI & creative direction","Aug – Oct 2019","Mobile"],
+  problem:"Labels make it hard to tell if food is safe, especially for restricted diets and uncommon allergies.",
+  role:"UX/UI designer, creative director and interaction designer.",
+  impact:"A concept shaped by 30 user interviews and prototype testing.",
+  metrics:[["30","users interviewed"],["100%","wanted clearer ingredients"]],
+  did:["Interviewed 30 users and mapped their journey","Designed scanning, diet profiles and family profiles","Iterated on the design from prototype testing","Created the brand, logo animation and prototype"],
+  chapters:[
+   {t:"Listening",c:"I interviewed 30 people in person and in vegan and vegetarian communities online.",quotes:["I look really hard and think it's ok to eat but end up getting sick anyway.","I hate all the hidden and nonsense ingredients they add."],d:"Turned interviews into a persona and a journey map to find the real pain points."},
+   {t:"What I learned",c:"Shopping with dietary needs is slow, confusing and isolating.",list:["Labels don't make animal-derived ingredients clear.","People visit several stores to get what they need.","Many felt isolated from family and friends.","No one used an app to help them shop."]},
+   {t:"Scan & profiles",c:"Reading every label is the core pain.",list:["Scan a product to see if it's safe.","Save diets, restrictions and allergies to a profile.","Add family profiles to shop for loved ones."]},
+   {t:"Testing changed it",c:"The first prototype made adding allergies and searching ingredients awkward.",d:"Added a search bar with an add option for allergies, and moved search onto the scan screen."},
+   {t:"Be as picky as you want",c:"The brand had to feel fresh, quick and a little quirky, not clinical.",d:"Built the identity on honesty, efficiency, empathy and inclusion, and designed the logo animation and final prototype."}
+  ]}
+];
+
+const LULU_THUMB=`<span class="lwrap" aria-hidden="true"><span class="lart lt"><span class="lb l1"></span><span class="lb l2"></span><span class="lb l3"></span>
+  <span class="gc"><span class="nm">Mrs. Sacha Hacker</span><span class="sub">Lookbook shared · Built to move</span></span></span></span>`;
+const LULU_HERO=`<span class="lwrap" aria-hidden="true"><span class="lart lt lhero"><span class="lb l1"></span><span class="lb l2"></span><span class="lb l3"></span>
+  <span class="gc"><span class="chips"><span class="chip">Plus</span><span class="chip">Sweat Collective</span></span><span class="nm">Mrs. Sacha Hacker</span><span class="sub">Contact preference: every 7 days</span></span></span></span>`;
+const LVL_ART=hero=>`<span class="lwrap" aria-hidden="true"><span class="lart lv${hero?" lvhero":""}"><img class="shot lap" src="img/lvl-art-laptop.webp" alt=""><img class="shot phn" src="img/lvl-art-phone.webp" alt="">${hero?'<img class="shot ck" src="img/lvl-art-checkin.webp" alt="">':""}</span></span>`;
+const CED_ART=hero=>`<span class="lwrap" aria-hidden="true"><span class="lart cd${hero?" cdhero":""}"><img class="shot c1" src="img/ced-ph-onboarding-1.webp" alt=""><img class="shot c2" src="img/ced-ph-journal-1.webp" alt="">${hero?'<img class="shot c3" src="img/ced-ph-welcome-3.webp" alt="">':""}<img class="wh" src="img/ced-art-wheel.webp" alt=""></span></span>`;
+const DS_ART=hero=>`<span class="lwrap" aria-hidden="true"><span class="lart ds${hero?" dshero":""}">${hero?'<img class="en" src="img/ds-art-en.webp" alt=""><img class="ar" src="img/ds-art-ar.webp" alt="">':'<img class="hen" src="img/ds-art-hi-en.webp" alt=""><img class="har" src="img/ds-art-hi-ar.webp" alt="">'}<span class="tg t1">English · LTR</span><span class="tg t2" dir="rtl">العربية · RTL</span>${hero?'<span class="mid"><b>⇄</b>One atomic system</span>':""}</span></span>`;
+const LMS_ART=hero=>`<span class="lwrap" aria-hidden="true"><span class="lart lm${hero?" lmhero":""}"><img src="img/${hero?"lms-hero":"lms-dashboard"}.webp" alt=""></span></span>`;
+const CODE_ART={lms:{thumb:LMS_ART(false),hero:LMS_ART(true)},ds:{thumb:DS_ART(false),hero:DS_ART(true)},ced:{thumb:CED_ART(false),hero:CED_ART(true)},lulu:{thumb:LULU_THUMB,hero:LULU_HERO},lvl:{thumb:LVL_ART(false),hero:LVL_ART(true)}};
+const artFor=(id,hero)=>CODE_ART[id]&&!PHOTOS[id]?CODE_ART[id][hero?"hero":"thumb"]:ART[id];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const bg=id=>PHOTOS[id]?`background-image:url('${PHOTOS[id]}')${id==="lms"?";background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#F0F3F6":""}`:`background-color:${TINT[id]}22`;
+const fig=(src,cap)=>`<figure><img src="${IMG+src}?format=1500w" alt="${esc(cap)}" loading="lazy" data-cap="${esc(cap)}"><figcaption>${esc(cap)}</figcaption></figure>`;
+
+if(PHOTOS.profile){const a=document.getElementById("avatar");a.style.backgroundImage=`url("${PHOTOS.profile}")`;a.classList.add("has-photo")}
+
+/* ---------- project grid ---------- */
+const grid=document.getElementById("grid");
+P.forEach((p,i)=>{
+  const b=document.createElement("button");
+  b.className="pcard"+(i===0?" feature":"");b.dataset.open=p.id;
+  b.setAttribute("aria-label","Open "+p.title+" case study");
+  b.innerHTML=`<span class="thumb${PHOTOS[p.id]?" has-photo":""}" style="${bg(p.id)}">${artFor(p.id)}${i===0?'<span class="badge">Most recent</span>':""}</span>
+  <span class="sel"><b></b><span>View case study</span></span>
+  <span class="info"><div><span class="t">${esc(p.title)}</span><span class="k mono">${esc(p.kind)}</span><span class="cimp">${esc(p.card||"")}</span></div><span class="arrow" aria-hidden="true">→</span></span>`;
+  grid.appendChild(b);
+});
+
+
+grid.dataset.home="b";
+
+/* ---------- view switch ---------- */
+function setView(v){grid.dataset.view=v;document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-selected",b.dataset.view===v))}
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>setView(b.dataset.view)));
+/* Resume: set a PDF path here once you have it, e.g. "resume.pdf". Until then the button opens the 60-second scan. */
+const RESUME_URL="resume.pdf";
+const rb=document.querySelector("[data-scan]");
+if(RESUME_URL){const a=document.createElement("a");a.href=RESUME_URL;a.target="_blank";a.rel="noopener";a.textContent="Resume";rb.replaceWith(a)}
+else{rb.remove();document.getElementById("pbtns").classList.add("no-resume")}
+
+/* ---------- sheet content ---------- */
+function caseHTML(p){
+  if(p.layout==="grid")return caseGrid(p);
+  if(p.layout==="slides")return caseSlides(p);
+  if(p.layout==="board")return caseBoard(p);
+  if(p.layout==="sidebar")return caseSidebar(p);
+  if(p.layout==="combo")return caseCombo(p);
+  return caseSteps(p);
+}
+function caseSteps(p){
+  const i=P.indexOf(p),prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
+  const n=p.chapters.length;
+  let h=`<article class="cs">
+  <div class="ov"><div><span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><p class="tldr">${esc(p.tldr)}</p>
+    <div class="facts">${p.facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div></div>
+    <div class="ov-hero${PHOTOS[p.id]?" has-photo":""}" style="${bg(p.id)}">${ART[p.id]}</div></div>
+  <div class="glance">
+    <div><span class="mono">The problem</span><p>${esc(p.problem)}</p></div>
+    <div><span class="mono">My role</span><p>${esc(p.role)}</p></div>
+    <div class="impact"><span class="mono">The impact</span><p>${esc(p.impact)}</p>${p.metrics?`<div class="metrics">${p.metrics.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join("")}</div>`:""}${p.flow?flowHTML(p):""}</div>
+  </div>
+  <section class="story" aria-label="How it came together">
+    <div class="story-head"><h2>How it came together</h2><span class="mono">${n} steps</span></div>
+    <div class="steps" role="tablist">${p.chapters.map((c,k)=>`<button role="tab" aria-selected="false" data-ch="${k}"><span class="n">${k+1}</span>${esc(c.t)}</button>`).join("")}</div>
+    <div class="ch-slot"></div>
+  </section>
+  <nav class="cs-nav" aria-label="More projects"><button data-open="${prev.id}"><span class="mono">← Previous project</span>${esc(prev.title)}</button><button data-open="${next.id}" style="text-align:right"><span class="mono">Next project →</span>${esc(next.title)}</button></nav></article>`;
+  return h;
+}
+function chapterHTML(p,k){
+  const c=p.chapters[k],n=p.chapters.length,i=P.indexOf(p),next=P[(i+1)%P.length];
+  const visual=c.img
+    ?`<figure><img src="${IMG+c.img}?format=1500w" alt="${esc(c.cap||c.t)}" data-cap="${esc(c.cap||c.t)}"></figure>`
+    :`<div class="ch-ph" style="background:${TINT[p.id]}1a">${ART[p.id]}</div>`;
+  let beats=`<div class="beat"><span class="mono">The challenge</span><p>${esc(c.c)}</p>${(c.quotes||[]).map(q=>`<p class="quote">“${esc(q)}”</p>`).join("")}</div>`;
+  beats+=`<div class="beat did"><span class="mono">What I did</span>${c.d?`<p>${esc(c.d)}</p>`:""}${c.list?`<ul>${c.list.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:""}</div>`;
+  if(c.r)beats+=`<div class="beat"><span class="mono">The result</span><p>${esc(c.r)}</p></div>`;
+  const nextBtn=k<n-1?`<button data-ch="${k+1}">Next step →</button>`:`<button data-open="${next.id}">Next project →</button>`;
+  return `<div class="chapter" role="tabpanel">${visual}<div class="ch-text"><span class="count mono">Step ${k+1} of ${n}</span><h3>${esc(c.t)}</h3>${beats}
+    <div class="ch-nav"><button data-ch="${k-1}"${k===0?" disabled":""}>← Back</button>${nextBtn}</div></div></div>`;
+}
+function showChapter(k,scroll){
+  if(!current)return;const p=P.find(x=>x.id===current.id);if(!p)return;
+  k=Math.max(0,Math.min(p.chapters.length-1,k));current.ch=k;
+  const sh=current.sheet,slot=sh.querySelector(".ch-slot");if(!slot)return;
+  slot.innerHTML=chapterHTML(p,k);
+  sh.querySelectorAll(".steps button").forEach((b,j)=>{b.setAttribute("aria-selected",j===k);if(j===k&&scroll)b.scrollIntoView({block:"nearest",inline:"nearest"})});
+  slot.querySelectorAll("img[data-cap]").forEach(img=>img.addEventListener("error",()=>{
+    const ph=document.createElement("div");ph.className="ph mono";ph.setAttribute("aria-hidden","true");img.closest("figure").replaceWith(ph);},{once:true}));
+  if(scroll){const body=sh.querySelector(".sheet-body"),st=sh.querySelector(".story");
+    if(st.getBoundingClientRect().top<body.getBoundingClientRect().top)st.scrollIntoView({block:"start",behavior:"smooth"});}
+}
+
+/* ---------- Layout B: decision grid (expand in place) ---------- */
+function caseGrid(p){
+  const i=P.indexOf(p),prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
+  return `<article class="cs">
+  <div class="dg-head"><div><span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><p class="tldr">${esc(p.tldr)}</p>
+    <div class="facts">${p.facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div></div>
+    <div class="dg-kv">
+      <div><span class="mono">The problem</span><p>${esc(p.problem)}</p></div>
+      <div><span class="mono">My role</span><p>${esc(p.role)}</p></div>
+      <div class="imp"><span class="mono">The impact</span><p>${esc(p.impact)}</p>${p.metrics?`<div class="metrics">${p.metrics.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join("")}</div>`:""}</div>
+    </div></div>
+  <div class="story-head dg-title"><h2>Key decisions</h2><span class="mono">Open any card to see how I solved it</span></div>
+  <div class="dg-grid"></div>
+  <nav class="cs-nav" aria-label="More projects"><button data-open="${prev.id}"><span class="mono">← Previous project</span>${esc(prev.title)}</button><button data-open="${next.id}" style="text-align:right"><span class="mono">Next project →</span>${esc(next.title)}</button></nav></article>`;
+}
+function renderGrid(k){
+  const p=P.find(x=>x.id===current.id),g=current.sheet.querySelector(".dg-grid");if(!g)return;
+  current.ch=k;
+  g.innerHTML=p.chapters.map((c,j)=>{
+    if(j!==k)return `<button class="dcard" data-dc="${j}" aria-expanded="false"><span class="dthumb" style="background:${TINT[p.id]}1a">${c.img?`<span class="mono">${String(j+1).padStart(2,"0")}</span>`:ART[p.id]}</span><span class="dtext"><span class="mono num">Decision ${j+1}</span><span class="dh">${esc(c.t)}</span><span class="dp">${esc(c.c)}</span><span class="more mono">See what I did +</span></span></button>`;
+    const vis=c.img?`<figure><img src="${IMG+c.img}?format=1500w" alt="${esc(c.cap||c.t)}" data-cap="${esc(c.cap||c.t)}"></figure>`:`<div class="ch-ph" style="background:${TINT[p.id]}1a">${ART[p.id]}</div>`;
+    return `<div class="dcard open" aria-expanded="true">${vis}<div class="ch-text"><span class="count mono">Decision ${j+1} of ${p.chapters.length}</span><h3>${esc(c.t)}</h3>${beatsHTML(c)}</div></div>`;
+  }).join("");
+  wireImgs(g);
+}
+
+/* ---------- Layout C: story slides ---------- */
+function caseSlides(p){
+  return `<article class="slides"><div class="bars" role="tablist">${slidesOf(p).map((s,j)=>`<button data-sl="${j}" aria-label="Slide ${j+1}: ${esc(s.name)}"></button>`).join("")}</div>
+  <div class="slide-slot"></div>
+  <div class="s-ctrl"><button class="sbtn" data-sl-step="-1" aria-label="Previous slide">←</button><span class="mono s-count"></span><button class="sbtn" data-sl-step="1" aria-label="Next slide">→</button></div></article>`;
+}
+function slidesOf(p){
+  const ph=`<div class="ch-ph" style="background:${TINT[p.id]}1a">${ART[p.id]}</div>`;
+  const s=[{name:"Overview",vis:`<div class="ov-hero${PHOTOS[p.id]?" has-photo":""}" style="${bg(p.id)}">${ART[p.id]}</div>`,
+    txt:`<span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><p class="tldr">${esc(p.tldr)}</p><div class="facts">${p.facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div>`},
+   {name:"The problem",vis:ph,txt:`<span class="count mono">The problem</span><h2>${esc(p.problem)}</h2><div class="beat"><span class="mono">My role</span><p>${esc(p.role)}</p></div>`}];
+  p.chapters.forEach((c,j)=>s.push({name:c.t,vis:c.img?`<figure><img src="${IMG+c.img}?format=1500w" alt="${esc(c.cap||c.t)}" data-cap="${esc(c.cap||c.t)}"></figure>`:ph,
+    txt:`<span class="count mono">Chapter ${j+1} of ${p.chapters.length}</span><h2>${esc(c.t)}</h2>${beatsHTML(c)}`}));
+  const i=P.indexOf(p),next=P[(i+1)%P.length];
+  s.push({name:"The impact",vis:`<div class="ov-hero" style="${bg(p.id)}">${ART[p.id]}</div>`,
+    txt:`<span class="count mono">The impact</span><h2>${esc(p.impact)}</h2>${p.metrics?`<div class="metrics">${p.metrics.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join("")}</div>`:""}<div class="ch-nav"><button data-sl="0">Start over</button><button data-open="${next.id}">Next project →</button></div>`});
+  return s;
+}
+function showSlide(k){
+  const p=P.find(x=>x.id===current.id),S=slidesOf(p),sh=current.sheet;
+  k=Math.max(0,Math.min(S.length-1,k));current.ch=k;
+  const slot=sh.querySelector(".slide-slot");
+  slot.innerHTML=`<div class="slide"><div class="s-vis">${S[k].vis}</div><div class="s-txt">${S[k].txt}</div></div>`;
+  sh.querySelectorAll(".bars button").forEach((b,j)=>{b.classList.toggle("done",j<k);b.classList.toggle("on",j===k);b.setAttribute("aria-selected",j===k)});
+  sh.querySelector(".s-count").textContent=`${k+1} / ${S.length} · ${S[k].name}`;
+  sh.querySelector('[data-sl-step="-1"]').disabled=k===0;
+  sh.querySelector('[data-sl-step="1"]').disabled=k===S.length-1;
+  wireImgs(slot);
+}
+function beatsHTML(c){
+  let b=`<div class="beat"><span class="mono">The challenge</span><p>${esc(c.c)}</p>${(c.quotes||[]).map(q=>`<p class="quote">“${esc(q)}”</p>`).join("")}</div>`;
+  b+=`<div class="beat did"><span class="mono">What I did</span>${c.d?`<p>${esc(c.d)}</p>`:""}${c.list?`<ul>${c.list.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:""}</div>`;
+  if(c.r)b+=`<div class="beat"><span class="mono">The result</span><p>${esc(c.r)}</p></div>`;
+  return b;
+}
+function wireImgs(root){root.querySelectorAll("img[data-cap]").forEach(img=>img.addEventListener("error",()=>{
+  const ph=document.createElement("div");ph.className="ph mono";ph.setAttribute("aria-hidden","true");(img.closest("figure")||img).replaceWith(ph);},{once:true}))}
+
+/* ---------- Layout C: impact board (everything visible) ---------- */
+const chk='<i aria-hidden="true">✓</i>';
+function metricsHTML(p){return p.metrics?`<div class="metrics">${p.metrics.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join("")}</div>`:""}
+function flowHTML(p){return p.flow?`<div class="flow">${p.flow.map(f=>`<span>${esc(f)}</span>`).join('<b aria-hidden="true">→</b>')}</div>`:""}
+function visHTML(p,c,full){
+  if(c.gallery){const caps=c.caps||[],cut=c.cut?` class="cut" style="background:${TINT[p.id]}1c"`:"";
+    if(!full)return `<figure${cut}><img src="${c.thumb||c.gallery[0]}" alt="${esc(caps[0]||c.cap||c.t)}" loading="lazy"${c.top?' style="object-position:top"':""}></figure>`;
+    return `<div class="gal" style="grid-template-columns:repeat(${c.cols||1},minmax(0,1fr))">${c.gallery.map((g,i)=>`<button class="zoom${c.cut?" cut":""}" data-zoom="${g}" aria-label="Enlarge: ${esc(caps[i]||c.t)}"${c.cut?` style="background:${TINT[p.id]}1c"`:""}><img src="${g}" alt="${esc(caps[i]||c.t)}" loading="lazy"></button>`).join("")}</div>`;}
+  return c.img?`<figure><img src="${IMG+c.img}?format=1500w" alt="${esc(c.cap||c.t)}" loading="lazy" data-cap="${esc(c.cap||c.t)}"></figure>`:`<div class="ch-ph" style="background:${TINT[p.id]}1a">${ART[p.id]}</div>`}
+function navHTML(p){const i=P.indexOf(p),prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
+  return `<nav class="cs-nav" aria-label="More projects"><button data-open="${prev.id}"><span class="mono">← Previous project</span>${esc(prev.title)}</button><button data-open="${next.id}" style="text-align:right"><span class="mono">Next project →</span>${esc(next.title)}</button></nav>`}
+function caseBoard(p){
+  const n=p.chapters.length,spans=n===5?[4,2,2,2,2]:n===4?[4,2,2,4]:p.chapters.map(()=>2);
+  return `<article class="cs">
+  <div class="bd-top"><div><span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><p class="tldr">${esc(p.tldr)}</p><div class="facts">${p.facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div></div>
+    <div class="bd-impact"><span class="mono">The impact</span><p>${esc(p.impact)}</p>${metricsHTML(p)}${flowHTML(p)}</div></div>
+  <div class="bd-strip"><div><span class="mono">The problem</span><p>${esc(p.problem)}</p></div><div><span class="mono">My role</span><p>${esc(p.role)}</p></div></div>
+  <h2 class="bd-h">What I did</h2>
+  <div class="did-row">${p.did.map(d=>`<div>${chk}<span>${esc(d)}</span></div>`).join("")}</div>
+  <h2 class="bd-h">The work</h2>
+  <div class="bento">${p.chapters.map((c,j)=>`<div class="tile" style="grid-column:span ${spans[j]}"><div class="tv">${visHTML(p,c)}</div><div class="tt"><h3>${esc(c.t)}</h3><p>${esc(c.d||c.c)}</p>${c.r?`<p class="res">${esc(c.r)}</p>`:""}</div></div>`).join("")}</div>
+  ${navHTML(p)}</article>`;
+}
+/* ---------- Layout D: sticky summary ---------- */
+function caseSidebar(p){
+  return `<article class="ss">
+  <aside class="ss-side"><span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><p class="tldr">${esc(p.tldr)}</p>
+    <div class="ss-imp"><span class="mono">The impact</span><p>${esc(p.impact)}</p>${metricsHTML(p)}${flowHTML(p)}</div>
+    <div class="ss-did"><span class="mono">What I did</span><ul>${p.did.map(d=>`<li>${chk}<span>${esc(d)}</span></li>`).join("")}</ul></div>
+    <div class="facts">${p.facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div></aside>
+  <div class="ss-main">
+    <div class="ss-prob"><div><span class="mono">The problem</span><p>${esc(p.problem)}</p></div><div><span class="mono">My role</span><p>${esc(p.role)}</p></div></div>
+    ${p.chapters.map((c,j)=>`<section class="scard"><div class="scard-v">${visHTML(p,c)}</div><span class="count mono">${String(j+1).padStart(2,"0")} · ${esc(c.t)}</span>
+      <div class="beats3${c.r?"":" two"}"><div><span class="mono">Challenge</span><p>${esc(c.c)}</p>${(c.quotes||[]).map(q=>`<p class="quote">“${esc(q)}”</p>`).join("")}</div>
+      <div class="did"><span class="mono">What I did</span>${c.d?`<p>${esc(c.d)}</p>`:""}${c.list?`<ul>${c.list.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:""}</div>${c.r?`<div><span class="mono">Result</span><p>${esc(c.r)}</p></div>`:""}</div></section>`).join("")}
+    ${navHTML(p)}</div></article>`;
+}
+
+/* ---------- Layout E: sticky summary + expandable cards ---------- */
+function caseCombo(p){
+  return `<article class="ss">
+  <aside class="ss-side"><span class="eyebrow mono">${esc(p.kind)}</span><h1>${esc(p.title)}</h1><span class="ss-meta"><b>${esc(p.facts[0])}</b><span>${esc(p.facts[1])}</span></span><p class="tldr">${esc(p.tldr)}</p>
+    <div class="ss-imp"><span class="mono">The impact</span><p>${esc(p.impact)}</p>${metricsHTML(p)}${flowHTML(p)}</div>
+    <div class="ss-did"><span class="mono">What I did</span><ul>${p.did.map((d,j)=>`<li>${j<p.chapters.length?`<button class="didlink" data-ct="${j}">${chk}<span>${esc(d)}</span></button>`:`${chk}<span>${esc(d)}</span>`}</li>`).join("")}</ul></div>
+    ${p.facts.length>2?`<div class="facts">${p.facts.slice(2).map(f=>`<span>${esc(f)}</span>`).join("")}</div>`:""}</aside>
+  <div class="ss-main">
+    <div class="cb-hero${PHOTOS[p.id]?" has-photo":""}" style="${bg(p.id)}">${artFor(p.id,true)}</div>
+    ${p.sides?`<div class="sides">${p.sides.map(([k,v])=>`<div><span class="mono">${esc(k)}</span><p>${esc(v)}</p></div>`).join('<b aria-hidden="true">⇄</b>')}</div>`:""}
+    <div class="ss-prob"><div><span class="mono">The problem</span><p>${esc(p.problem)}</p></div><div><span class="mono">My role</span><p>${esc(p.role)}</p></div></div>
+    <div class="story-head cb-head">${p.chapters[0].group?"<span></span>":"<h2>The work</h2>"}<span class="mono">Click any card to read more</span></div>
+    <div class="combo"></div>
+    ${navHTML(p)}</div></article>`;
+}
+function renderCombo(k){
+  const p=P.find(x=>x.id===current.id),g=current.sheet.querySelector(".combo");if(!g)return;
+  current.ch=k;
+  g.innerHTML=p.chapters.map((c,j)=>(c.group&&(j===0||p.chapters[j-1].group!==c.group)?`<h3 class="cgroup">${esc(c.group)}</h3>`:"")+(j===k
+    ?`<div class="ctile open"><div class="cv">${visHTML(p,c,true)}</div><div class="ch-text"><span class="count mono">${String(j+1).padStart(2,"0")} of ${String(p.chapters.length).padStart(2,"0")}</span><h3>${esc(c.t)}</h3>${beatsHTML(c)}<div class="ch-nav"><button data-ct="-1">Show less −</button>${j<p.chapters.length-1?`<button data-ct="${j+1}">Next card →</button>`:""}</div></div></div>`
+    :`<button class="ctile" data-ct="${j}" aria-expanded="false"><span class="tv">${visHTML(p,c)}</span><span class="tt"><h3>${esc(c.t)}</h3><p>${esc(c.d||c.c)}</p>${c.r?`<p class="res">${esc(c.r)}</p>`:""}<span class="more mono">Read more +</span></span></button>`)).join("");
+  current.sheet.querySelectorAll(".didlink").forEach(b=>b.classList.toggle("on",+b.dataset.ct===k));
+  wireImgs(g);
+}
+
+const EMAIL="shriyaditha.somagani2011@gmail.com";
+const SHEETS={
+  about:{small:true,label:"About",html:`<div class="pad"><h2>Hey there!</h2><p>I'm Shriya, a product designer passionate about building sustainable design systems and intuitive digital products.</p><p>I studied Digital Design at Vancouver Film School, and recently graduated from Humber College, where I specialised in 3D modelling to push my visual design further.</p><p>Most recently I was a Senior UX Designer at lululemon, designing the clienteling platform Personal Shoppers use to manage their guests. Before that I spent four years as lead product designer at LVL Wellbeing, building its web and mobile apps and bilingual design system.</p><p>I work best where a business and its customers meet: the tools teams rely on every day, and the experiences their customers see. I'm looking for Senior Product Designer roles anywhere in Canada.</p></div>`},
+  contact:{small:true,label:"Contact",html:`<div class="pad"><h2>Say hi</h2><p>The fastest way to reach me is email or LinkedIn.</p><div class="copyrow"><span class="lbl mono">Email</span><span class="val">${EMAIL}</span><button data-copy="${EMAIL}">Copy</button></div><div class="copyrow"><span class="lbl mono">LinkedIn</span><span class="val">/in/shriyasomagani</span><a href="https://www.linkedin.com/in/shriyasomagani" target="_blank" rel="noopener">Open</a></div></div>`}
+};
+const LAYOUT={steps:"Layout A · Overview + steps",grid:"Layout B · Decision grid",slides:"Story slides",board:"Layout C · Impact board",sidebar:"Layout D · Sticky summary",combo:"Layout E · Summary + expandable cards"};
+P.forEach(p=>SHEETS[p.id]={label:"Case study · "+p.title,html:caseHTML(p),isCase:true,layout:p.layout||"steps"});
+
+/* ---------- open / close ---------- */
+let current=null,lastFocus=null;
+function open(id){
+  const d=SHEETS[id];if(!d)return;
+  if(current){current.sheet.remove();current.scrim.remove()}else lastFocus=document.activeElement;
+  const scrim=document.createElement("div");scrim.className="scrim";
+  const sheet=document.createElement("div");sheet.className="sheet"+(d.small?" small":"");
+  sheet.setAttribute("role","dialog");sheet.setAttribute("aria-modal","true");sheet.setAttribute("aria-label",d.label);
+  sheet.innerHTML=`<div class="sheet-bar"><span class="mono">${esc(d.label)}</span><button class="xbtn" aria-label="Close">×</button></div><div class="sheet-body">${d.html}</div>`;
+  document.body.append(scrim,sheet);document.body.classList.add("locked");
+  scrim.onclick=close;sheet.querySelector(".xbtn").onclick=close;
+  sheet.querySelectorAll("img[data-cap]").forEach(img=>img.addEventListener("error",()=>{
+    const ph=document.createElement("div");ph.className="ph mono";ph.setAttribute("aria-hidden","true");img.replaceWith(ph);},{once:true}));
+  current={sheet,scrim,id};
+  if(d.layout==="slides")sheet.classList.add("is-slides");
+  if(d.isCase){if(d.layout==="grid")renderGrid(0);else if(d.layout==="combo")renderCombo(-1);else if(d.layout==="slides"){showSlide(0);swipe(sheet)}else showChapter(0,false);}
+  sheet.querySelector(".xbtn").focus({preventScroll:true});
+  setHash(d.isCase?id:"");
+}
+function close(){
+  if(!current)return;current.sheet.remove();current.scrim.remove();current=null;
+  document.body.classList.remove("locked");setHash("");
+  if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+}
+function swipe(el){let x0=null;el.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse")x0=e.clientX});
+  el.addEventListener("pointerup",e=>{if(x0===null)return;const dx=e.clientX-x0;x0=null;if(Math.abs(dx)>50&&current)showSlide(current.ch+(dx<0?1:-1))})}
+function openZoom(src,alt){const d=document.createElement("div");d.className="lightbox";d.setAttribute("role","dialog");d.setAttribute("aria-label",alt);
+  d.innerHTML=`<div class="lb-in"><img src="${src}" alt="${esc(alt)}"></div><button class="xbtn" aria-label="Close">×</button>`;d.onclick=e=>{if(e.target.tagName!=="IMG")d.remove()};document.body.appendChild(d);d.querySelector(".xbtn").focus()}
+function setHash(id){try{history.replaceState(null,"",id?"#"+id:location.pathname+location.search)}catch(e){}}
+
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-copy]");
+  if(c){const t=c.dataset.copy,done=()=>{c.textContent="Copied";setTimeout(()=>c.textContent="Copy",1400)};
+    if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,()=>selectVal(c));else selectVal(c);return}
+  const dc=e.target.closest("[data-dc]");if(dc){renderGrid(+dc.dataset.dc);const o=current.sheet.querySelector(".dcard.open");o&&o.scrollIntoView({block:"nearest",behavior:"smooth"});return}
+  const z=e.target.closest("[data-zoom]");if(z){openZoom(z.dataset.zoom,z.querySelector("img").alt);return}
+  const ct=e.target.closest("[data-ct]");if(ct){const k=+ct.dataset.ct;renderCombo(k);const o=current.sheet.querySelector(k<0?".combo":".ctile.open");o&&o.scrollIntoView({block:"nearest",behavior:"smooth"});return}
+  const sl=e.target.closest("[data-sl]");if(sl){showSlide(+sl.dataset.sl);return}
+  const ss=e.target.closest("[data-sl-step]");if(ss){showSlide(current.ch+ +ss.dataset.slStep);return}
+  const ch=e.target.closest("[data-ch]");if(ch){showChapter(+ch.dataset.ch,true);return}
+  const o=e.target.closest("[data-open]");if(o)open(o.dataset.open);
+});
+document.addEventListener("keydown",e=>{
+  const lb=document.querySelector(".lightbox");if(lb){if(e.key==="Escape")lb.remove();return}
+  if(!current)return;
+  if(e.key==="Escape")close();
+  if(current.sheet.querySelector(".slides")&&(e.key==="ArrowRight"||e.key==="ArrowLeft")){e.preventDefault();showSlide(current.ch+(e.key==="ArrowRight"?1:-1));return}
+  if(current.sheet.querySelector(".story")&&(e.key==="ArrowRight"||e.key==="ArrowLeft")&&!e.target.matches("input,textarea")){
+    e.preventDefault();showChapter(current.ch+(e.key==="ArrowRight"?1:-1),true)}
+  if(e.key==="Tab"){const f=[...current.sheet.querySelectorAll("button,a[href]")];if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+});
+function selectVal(btn){const v=btn.parentElement.querySelector(".val"),r=document.createRange();r.selectNodeContents(v);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+
+const start=location.hash.slice(1);if(SHEETS[start])open(start);
+})();
+</script>
+
+</body>
+</html>
